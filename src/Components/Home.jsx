@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Body() {
+function Home() {
   return (
     <main className='main container'>
       <div className='content-wrapper'>
@@ -14,10 +14,10 @@ function Body() {
         </div>
       </div>
       <div className='image-container'>
-        <img className='image' src='/images/Kickin.webp' alt="Adidas shoes in action"></img>
+        <img className='image' src='/images/Kickin.webp' alt="Adidas shoes in action" />
       </div>
     </main>
   );
 }
 
-export default Body;
+export default Home;

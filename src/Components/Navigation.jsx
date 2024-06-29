@@ -1,22 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
   return (
     <nav className='container'>
       <div className="img-logo">
-        <img src='/images/logogo.jpeg' alt='logo' className='logo'></img>
+        <img src='/images/logogo.jpeg' alt='logo' className='logo' />
       </div>
       <ul>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-     
+        <li><Link to="/Home">Home</Link></li>
+        <li><Link to="/About">About</Link></li>
+        <li><Link to="/Contact">Contact</Link></li>
       </ul>
       <div className="nav-right">
         <button>Login</button>
       </div>
     </nav>
-    
   );
 }
 
