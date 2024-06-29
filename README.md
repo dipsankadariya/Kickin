@@ -1,8 +1,4 @@
-# React + Vite
+A stylish and modern website showcasing Kickin', a fictional shoe brand. Built with React, featuring responsive design, smooth transitions, and a minimalist aesthetic.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot 2024-06-29 164048](https://github.com/dipsankadariya/Kickin/assets/139572157/94d346e7-3f8a-4dd2-8ef4-1ab4d4eab760)
