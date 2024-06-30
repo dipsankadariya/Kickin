@@ -33,13 +33,30 @@ function GetStarted() {
             description: 'Exclusive designs for the true shoe enthusiast.',
             image: '/images/img6.jpeg'
         },
+        {
+            title: 'Casual Limited Edition',
+            description: 'Exclusive designs for the true shoe enthusiast.',
+            image: '/images/img7.jpeg'
+        },
+        {
+            title: 'Leather Boots',
+            description: 'Stylist boots for the true boots lovers.',
+            image: '/images/img8.jpeg'
+        },
+        {
+            title: 'Lady Sandals',
+            description: 'Esthetic  Scandals with Brown shaded color',
+            image: '/images/img9.jpeg'
+        },
+        
     ];
 
     return (
         <div className="get-started">
             <h1>Discover Our Collection</h1>
             <p className="intro">Find your perfect pair from our diverse range of styles</p>
-            <div className="category-grid">
+
+            <div className="category-grid"> 
                 {categories.map((category, index) => (
                     <div key={index} className="category-card">
                         <img src={category.image} alt={category.title} className="category-image" />
