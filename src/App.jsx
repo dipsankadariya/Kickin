@@ -5,7 +5,7 @@ import About from './Components/About';
 import Home from './Components/Home';
 import Contact from './Components/Contact';
 import Navigation from './Components/Navigation';
-
+import GetStarted from './Components/GetStarted';
 const Layout = () => (
   <>
     <Navigation />
@@ -34,6 +34,11 @@ const router = createBrowserRouter([
         path: 'contact',
         element: <Contact />,
       },
+      {
+        path: 'get-started',
+        element: <GetStarted  />,
+      },
+
     ],
   },
 ]);

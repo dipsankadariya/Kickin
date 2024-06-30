@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/get-started');
+  };
+
   return (
     <main className='main container'>
       <div className='content-wrapper'>
@@ -9,7 +16,7 @@ function Home() {
           <h2>Crafting stylish and comfortable footwear for every stride, blending fashion with unbeatable comfort."</h2>
         </div>
         <div className='btn'>
-          <button>Get Started</button> 
+          <button className='getStarted' onClick={handleGetStarted}>Get Started</button>
           <button>Shop</button>
         </div>
       </div>
