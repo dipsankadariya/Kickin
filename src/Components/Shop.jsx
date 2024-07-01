@@ -1,11 +1,11 @@
-import React from 'react';
-import './GetStarted.css';
+import React from "react";
+import './shop.css';
 
-function GetStarted() {
+function Shop() {
     const categories = [
         {
             title: 'Chelsea boots',
-            description: 'close-fitting ankle boots feature signature elasticated side panels for easy on-and-off wear.',
+            description: 'Close-fitting ankle boots feature signature elasticated side panels for easy on-and-off wear.',
             image: '/images/img1.jpeg'
         },
         {
@@ -40,35 +40,35 @@ function GetStarted() {
         },
         {
             title: 'Leather Boots',
-            description: 'Stylist boots for the true boots lovers.',
+            description: 'Stylish boots for the true boots lovers.',
             image: '/images/img8.jpeg'
         },
         {
             title: 'Lady Sandals',
-            description: 'Esthetic  Scandals with Brown shaded color',
+            description: 'Esthetic Sandals with Brown shaded color',
             image: '/images/img9.jpeg'
         },
-        
     ];
 
     return (
-        <div className="get-started">
-            <h1>Discover Our Collection</h1>
-            <p className="intro">Find your perfect pair from our diverse range of styles</p>
-
-            <div className="category-grid"> 
+        <div className="shop-container-custom">
+            <h1  className="intro">Get Shopping</h1>
+            <p className="shop-intro-custom">Kickin' Shoes Where Style Meets Comfort</p>
+            
+            <div className="category-grid-custom">
                 {categories.map((category, index) => (
-                    <div key={index} className="category-card">
-                        <img src={category.image} alt={category.title} className="category-image" />
-                        <div className="category-info">
+                    <div key={index} className="category-card-custom">
+                        <img src={category.image} alt={category.title} className="category-image-custom" />
+                        <div className="category-info-custom">
                             <h3>{category.title}</h3>
                             <p>{category.description}</p>
+                            <button className="add-to-cart-btn-custom">Add to Cart</button>
                         </div>
-                    </div> 
+                    </div>
                 ))}
             </div>
         </div>
     );
 }
 
-export default GetStarted;
+export default Shop;

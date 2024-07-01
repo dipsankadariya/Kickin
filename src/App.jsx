@@ -6,6 +6,7 @@ import Home from './Components/Home';
 import Contact from './Components/Contact';
 import Navigation from './Components/Navigation';
 import GetStarted from './Components/GetStarted';
+import Shop from './Components/Shop';
 const Layout = () => (
   <>
     <Navigation />
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: 'get-started',
         element: <GetStarted  />,
+      },
+      {
+        path: 'get-shopping',
+        element: <Shop  />,
       },
 
     ],
