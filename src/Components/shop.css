@@ -10,9 +10,9 @@ body {
 }
 
 .shop-container-custom {
-    max-width: 1400px; /* Increased from 1200px to 1400px */
+    max-width: 1400px; 
     margin: 0 auto;
-    padding: 80px 40px; /* Adjusted padding for better balance */
+    padding: 80px 40px;
     background-color: #f5f5f5;
     color: #000;
 }
