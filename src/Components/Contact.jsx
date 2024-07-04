@@ -1,40 +1,59 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './Contact.css';
 
 function Contact() {
+  const form = useRef();
+  const [buttonText, setButtonText] = useState('Send Message');
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setButtonText('Message Sent');
+
+    emailjs
+      .sendForm('service_3sboizq', 'template_l9gnv48', form.current, {
+        publicKey: 'oxHEouJdu60iKkX3O',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+         
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setButtonText('Send Message');  
+        }
+      );
+  };
+
   return (
-    <main className='main container'>
-      <div className='content-wrapper'>
-        <div className='content'>
-          <h1>Contact Us</h1>
-          <p>Have questions? We'd love to hear from you! Reach out to us using the form below or through our contact information.</p>
-          <form className='contact-form'>
-            <div className='form-group'>
-              <label htmlFor='name'>Name</label>
-              <input type='text' id='name' name='name' placeholder='Your Name' required />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='email'>Email</label>
-              <input type='email' id='email' name='email' placeholder='Your Email' required />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='subject'>Subject</label>
-              <input type='text' id='subject' name='subject' placeholder='Subject' required />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='message'>Message</label>
-              <textarea id='message' name='message' rows='5' placeholder='Your Message' required></textarea>
-            </div>
-            <button type='submit' id='send-message-btn'>Send Message</button>
-          </form>
+    <div className="contact-container">
+      <h1>Contact Us</h1>
+      <p className="contact-description">
+        Have questions? We'd love to hear from you! Reach out to
+        us using the form below or through our contact
+        information.
+      </p>
+      <form ref={form} onSubmit={sendEmail} className="contact-form" autoComplete="off">
+        <div className="form-group">
+          <label htmlFor="user_name">Name</label>
+          <input type="text" id="user_name" name="user_name" placeholder="Your Name" required autoComplete="off" />
         </div>
-        <div className='contact-info'>
-          <h2>Contact Information</h2>
-          <p>Email: contacts@kickin.com</p>
-          <p>Phone: (123) 456-7890</p>
-          <p>Address: 123 Kickin' Street, Fashion City, CA 12345</p>
+        <div className="form-group">
+          <label htmlFor="user_email">Email</label>
+          <input type="email" id="user_email" name="user_email" placeholder="Your Email" required autoComplete="off" />
         </div>
-      </div>
-    </main>
+        <div className="form-group">
+          <label htmlFor="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required autoComplete="off" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" required autoComplete="off"></textarea>
+        </div>
+        <button type="submit" className="submit-button">{buttonText}</button>
+      </form>
+    </div>
   );
 }
 

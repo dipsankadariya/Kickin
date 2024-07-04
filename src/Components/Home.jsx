@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Shop from './Shop';
-
+import Contact from './Contact';
 function Home() {
   const navigate = useNavigate();
 
