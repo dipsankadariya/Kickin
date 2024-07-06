@@ -1,7 +1,9 @@
 import React from "react";
 import './shop.css';
+import { useCart } from './CartContext';
 
 function Shop() {
+    const { addToCart } = useCart();
     const categories = [
         {
             title: 'Chelsea boots',
@@ -50,9 +52,14 @@ function Shop() {
         },
     ];
 
+    const handleAddToCart = (category) => {
+        addToCart(category);
+        
+    };
+
     return (
         <div className="shop-container-custom">
-            <h1  className="intro">Get Shopping</h1>
+            <h1 className="intro">Get Shopping</h1>
             <p className="shop-intro-custom">Kickin' Shoes Where Style Meets Comfort</p>
             
             <div className="category-grid-custom">
@@ -62,7 +69,12 @@ function Shop() {
                         <div className="category-info-custom">
                             <h3>{category.title}</h3>
                             <p>{category.description}</p>
-                            <button className="add-to-cart-btn-custom">Add to Cart</button>
+                            <button 
+                                className="add-to-cart-btn-custom" 
+                                onClick={() => handleAddToCart(category)}
+                            >
+                                Add to Cart
+                            </button>
                         </div>
                     </div>
                 ))}
